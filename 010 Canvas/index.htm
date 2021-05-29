@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas></canvas>
+</body>
+<script>
+  const canvas = document.getElementsByTagName('canvas')[0]
+  canvas.height = 300
+  canvas.width = 500
+  // 确定兼容 Canvas
+  if (canvas.getContext) {
+    c = canvas.getContext('2d')
+    console.log(canvas);
+
+    c.lineWidth = 1
+
+    // 开始绘制
+    c.beginPath()
+    // 设置起点
+    c.moveTo(100, 100)
+    // 下个点
+    c.lineTo(150, 200)
+    // 绘制点之间的线路
+    c.stroke();
+    // 结束绘制
+    c.closePath()
+  }
+</script>
+
+</html>

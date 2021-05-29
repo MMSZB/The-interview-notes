@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  var a = Date(0)            // string  Thu May 06 2021 21:09:20 GMT+0800 (中国标准时间)
+  var b = new Date(0)        // Object Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)
+  var c = new Date()         // Object Thu May 06 2021 21:09:20 GMT+0800 (中国标准时间)
+  var d = new Date('mmszb')  //Object  Invalid Date
+
+  Function.length               // 1
+  new Function().length         // 0
+
+
+
+  let res = new Array()
+  for (var i = 0; i < 10; i++) {
+    res.push(function () {
+      return console.log(i)
+    })
+  }
+  
+  res[0]()  // 10
+  res[1]()  // 10
+  res[2]()  // 10
+  // 把 for 循环中var  换成let 输出 0 1 2
+</script>
+
+</html>

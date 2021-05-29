@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+  try {
+    // 可能会出错的地方
+    window.dddd();
+  } catch (err) {
+    // 出错时怎么处理
+    console.log(123, err);
+    throw Error('今天没好好吃饭err')
+  } finally {
+    console.log(`finally 执行了`);
+    document.write(eval("2+2"))
+  }
+  // finally  是可选项  无论正确与否 都会执行  return 也不好使
+</script>
+
+</html>
